@@ -2,7 +2,7 @@ package evm;
 
 public class ControlUnit {
 	DisplaySection displaySection = new DisplaySection();
-	//BallotSection ballotSection = new BallotSection();
+	
 	CloseButton close = new CloseButton();
 	Boolean pullStart;
 	
@@ -31,7 +31,11 @@ public class ControlUnit {
 	
 	public void Close(){
 		if(close.pressed()==true){
-			
+			closePull();
 		}
+	}
+	
+	public int getTotalVotes(){
+		return totalVotes;
 	}
 }
